@@ -10,6 +10,7 @@ namespace CPPGuidelines{
         String string2 = "Hello";
         std::cout << "Initializing dest using std::move.\n";
         String dest = std::move(string2);
+        dest = dest;
         std::cout << "String Count: " << String::getCount() << std::endl;
     }
 

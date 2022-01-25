@@ -20,10 +20,13 @@ namespace CPPGuidelines{
         }
 
         ~String() {
-//            std::cout << "String Class Destroyed " << m_data << "\n";
-            m_size = 0;
-            delete[] m_data;
-            m_data = nullptr;
+            if(m_data) {
+                std::cout << "String Class Destroyed " << m_data << "\n";
+                m_size = 0;
+                delete[] m_data;
+                m_data = nullptr;
+            }
+
             m_count--;
         }
 
@@ -45,18 +48,18 @@ namespace CPPGuidelines{
             return *this;
         }
 
-        String(String&& other) noexcept{
+        String(String&& rhs) noexcept{
             std::cout << "String Class Move Constructor.\n";
-            m_size = other.m_size;
-            m_data = other.m_data;
+            std::swap(m_size, rhs.m_size);
+            std::swap(m_data, rhs.m_data);
         }
 
-        String& operator =(String&& rhs) noexcept{
+        String& operator=(String&& rhs) noexcept{
             std::cout << "String Class Move Assignment Operator.\n";
 
             if(this != &rhs){
-                m_size = rhs.m_size;
-                m_data = rhs.m_data;
+                std::swap(m_size, rhs.m_size);
+                std::swap(m_data, rhs.m_data);
             }
 
             return *this;
