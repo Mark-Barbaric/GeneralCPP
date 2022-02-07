@@ -1,11 +1,21 @@
-class Rnd{
+class Singleton{
 
-    Rnd() {}
-    float m_randomNum {0.5f};
-    static Rnd m_instance;
+    static Singleton* m_singleton {nullptr};
+
 public:
-    Random(const Rnadom&) = delete;
-    static Rnd& get() {
-       return m_instance;
+
+    static Singleton* getSingleton() {
+        if(!m_singleton){
+            m_singleton = new Singleton;
+        }
+
+        return m_singleton;
     }
+
+    Singleton(const Singleton& rhs) = delete;
+    Singleton(const Singleton&& rhs) = delete;
+    Singleton& operator =(const Singleton& rhs) = delete;
+    Singleton& operator =(const Singleton&& rhs) = delete;
+
+
 };

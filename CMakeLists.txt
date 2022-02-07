@@ -8,5 +8,6 @@ add_library(SOLID Chapter1/SOLID/RunSOLIDExamples.cpp Chapter1/SOLID/SingleRespo
 target_link_libraries(GeneralCPP SOLID)
 add_library(CPP_GuideLines CPP_GuideLines/Move.h CPP_GuideLines/RunCPPGuideLines.cpp)
 target_link_libraries(GeneralCPP CPP_GuideLines)
-add_library(DesignPatterns DesignPatterns/Creational/RunCreationalPatterns.cpp DesignPatterns/Creational/Singleton.h)
+add_library(DesignPatterns DesignPatterns/RunDesignPatterns.cpp DesignPatterns/Creational/Singleton.h
+        DesignPatterns/Creational/Builder/RunBuilderPatterns.cpp DesignPatterns/Creational/Builder/HTML.h)
 target_link_libraries(GeneralCPP DesignPatterns)

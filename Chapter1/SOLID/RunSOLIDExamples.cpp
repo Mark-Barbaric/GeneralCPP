@@ -9,6 +9,10 @@ namespace SOLID {
         SavingManager::save(journal, "journal2.txt");
     }
 
+    inline void runLiskovSubstitutionPrinciple(){
+
+    }
+
     inline void runSOLIDExamples(){
         std::cout << "Running SOLID Examples.\n\n";
         std::cout << "Running Single Responsability Principle.\n";

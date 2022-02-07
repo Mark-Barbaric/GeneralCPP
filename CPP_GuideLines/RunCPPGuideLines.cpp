@@ -1,4 +1,5 @@
 #include "Move.h"
+#include "VectorBestPractice.h"
 
 namespace CPPGuidelines{
     inline void runMove(){
