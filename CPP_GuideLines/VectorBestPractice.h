@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <vector>
 
 namespace CPPGuidelines{
     struct Object{
@@ -27,5 +28,10 @@ namespace CPPGuidelines{
         objects.reserve(2);
         objects.emplace_back(1,2,3);
         objects.emplace_back(4,5,6);
+    }
+
+    inline void runVectorBestPractices(){
+        runVectorTest();
+        runVectorOptimised();
     }
 }
