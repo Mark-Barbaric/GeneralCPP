@@ -1,5 +1,6 @@
 #include "Move.h"
 #include "VectorBestPractice.h"
+#include "Exceptions.h"
 
 void runMove();
 void runCPPGuidelines();
@@ -21,6 +22,7 @@ void runMove(){
 void runCPPGuidelines(){
     std::cout << "Running CPP Guidelines.\n\n";
     runMove();
+    runExceptions();
     CPPGuidelines::runVectorBestPractices();
 }
 
